@@ -25,6 +25,52 @@ DevsHub Imaging demonstrates a connected workflow for imaging centers, referring
 
 This standalone preview lets visitors explore that experience without an account or external service setup. It is intended for product evaluation, demonstrations and discussion of the complete system.
 
+## See the experience
+
+Actual screens from the live preview, using synthetic sample records only.
+
+### Imaging center overview
+
+Track delivered packages, saved drafts and patient history in one clear workspace.
+
+![DevsHub Imaging center overview with package status and patient history](docs/screenshots/center-overview.jpg)
+
+### Patient identity and source review
+
+Confirm the person, review every source and choose the referring doctor before delivery.
+
+![Patient intake with reviewed identity, source files and referring doctor](docs/screenshots/patient-intake.jpg)
+
+### Bulk intake, one person at a time
+
+Review separate person cards, assign a shared or individual doctor and send ready packages while unresolved cards stay held.
+
+![Bulk workspace with separate patient cards and doctor assignments](docs/screenshots/bulk-review.jpg)
+
+### The doctor's result inbox
+
+Find eligible examinations, identify the sending center and open a patient's current and previous visits.
+
+![Doctor inbox with received examinations and sending-center details](docs/screenshots/doctor-inbox.jpg)
+
+### Interactive imaging reader
+
+Explore frame navigation, cine playback, display adjustments and temporary measurement tools on a clearly labeled synthetic imaging sample.
+
+![Synthetic MRI reader with frame navigation and display controls](docs/screenshots/imaging-reader.jpg)
+
+### Simple patient PDF access
+
+Patients can open their result page and download its complete printable PDF, without navigating imaging tools or signing in.
+
+![Patient result page with complete printable PDF download](docs/screenshots/patient-documents.jpg)
+
+### Clear administrative controls
+
+Review checked permissions and center scope, alongside account, patient-field and record-management experiences.
+
+![Administrator workspace with explicit permission checkboxes and center scope](docs/screenshots/administration.jpg)
+
 ## Four connected experiences
 
 | Role                 | What you can explore                                                                                                                                                |
@@ -138,52 +184,9 @@ The interface adapts to desktop, tablet and phone layouts, including mobile navi
 
 The visual identity uses the original DevsHub D mark, midnight framing, paper surfaces and indigo emphasis. The same identity appears across the welcome experience, workspaces, patient pages and generated sample documents.
 
-## Run locally
+## A separate demonstration workspace
 
-Use **Node.js 24** and **pnpm 10.30.3**. No backend setup or environment variables are required.
-
-```sh
-git clone https://github.com/HostX0/devshub-imaging-preview.git
-cd devshub-imaging-preview
-pnpm install --frozen-lockfile
-pnpm run dev
-```
-
-Open the local address printed by Vite. To build and inspect the static production version:
-
-```sh
-pnpm run build
-pnpm run preview
-```
-
-### Development checks
-
-```sh
-pnpm run typecheck
-pnpm test
-pnpm run format:check
-pnpm exec playwright install --no-shell chromium
-pnpm run test:browser
-```
-
-Browser checks use one worker and start the local server automatically. To run them against a deployed preview:
-
-```sh
-PREVIEW_URL=https://devshub-imaging-demo.vercel.app pnpm run test:browser
-```
-
-## Technology and deployment
-
-| Purpose            | Technology                                        |
-| ------------------ | ------------------------------------------------- |
-| Application        | React 19, TypeScript and Vite                     |
-| Interface          | Responsive CSS, Radix UI dialogs and Lucide icons |
-| Sample exports     | jsPDF, QRCode and browser canvas                  |
-| Local state        | Browser storage and in-memory file references     |
-| Development checks | Vitest, Playwright, axe-core and Prettier         |
-| Hosting            | Static deployment on Vercel                       |
-
-The repository is a standalone frontend project. Vercel uses `pnpm install --frozen-lockfile`, builds with `pnpm run build` and serves the generated `dist` directory. The product guide is available from the live preview. GitHub verification checks the frontend on pushes and pull requests. The connected Vercel project automatically publishes updates from the main branch and creates preview deployments for other branches.
+The preview runs independently with synthetic records and browser-local changes. It does not connect to the live product, share its accounts or access its patient records. Exploring, editing or resetting this demo does not change the original system.
 
 ## Obtain the complete system
 
