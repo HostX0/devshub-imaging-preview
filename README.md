@@ -183,7 +183,7 @@ PREVIEW_URL=https://devshub-imaging-demo.vercel.app pnpm run test:browser
 | Development checks | Vitest, Playwright, axe-core and Prettier         |
 | Hosting            | Static deployment on Vercel                       |
 
-The repository is a standalone frontend project. Vercel uses `pnpm install --frozen-lockfile`, builds with `pnpm run build` and serves the generated `dist` directory. The product guide is available from the live preview. GitHub verification checks the frontend on pushes and pull requests; Vercel can publish branch previews through its Git integration.
+The repository is a standalone frontend project. Vercel uses `pnpm install --frozen-lockfile`, builds with `pnpm run build` and serves the generated `dist` directory. The product guide is available from the live preview. GitHub verification checks the frontend on pushes and pull requests. The connected Vercel project automatically publishes updates from the main branch and creates preview deployments for other branches.
 
 ## Obtain the complete system
 
