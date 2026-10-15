@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vercel/
+coverage/
+playwright-report/
+test-results/
+pnpm-lock.yaml
+work/
+public/brand/
+public/icon.svg

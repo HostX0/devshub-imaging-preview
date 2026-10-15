@@ -1,0 +1,42 @@
+{
+  "name": "devshub-imaging-preview",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4300",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --maxWorkers=1",
+    "test:browser": "playwright test",
+    "preview": "vite preview --host 127.0.0.1 --port 4300",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "lucide-react": "^0.577.0",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "jspdf": "4.2.1",
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "vite": "8.3.4",
+    "@vitejs/plugin-react": "6.1.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/qrcode": "^1.5.6",
+    "typescript": "5.9.3",
+    "vitest": "4.0.18",
+    "@playwright/test": "1.59.1",
+    "@axe-core/playwright": "4.13.0",
+    "@types/node": "24.10.1",
+    "prettier": "3.8.1"
+  },
+  "description": "DevsHub Imaging — an interactive, browser-only product demonstration.",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "packageManager": "pnpm@10.30.3"
+}
